@@ -30,9 +30,9 @@
     sha256 = "b16e6bc0fc7e6a218583f40c7d201771f2e3072f85ef6e9217b36c1dc6b2aa25";
   };
   libass = {
-    version = "0.17.1";
-    url = "https://github.com/libass/libass/releases/download/0.17.1/libass-0.17.1.tar.xz";
-    sha256 = "f0da0bbfba476c16ae3e1cfd862256d30915911f7abaa1b16ce62ee653192784";
+    version = "0.17.4";
+    url = "https://github.com/libass/libass/releases/download/0.17.4/libass-0.17.4.tar.xz";
+    sha256 = "78f1179b838d025e9c26e8fef33f8092f65611444ffa1bfc0cfac6a33511a05a";
   };
   libogg = {
     version = "1.3.5";
