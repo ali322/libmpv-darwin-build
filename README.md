@@ -1,4 +1,4 @@
-# libmpv build
+# libmpv build updated
 
 Provides builds of [libmpv](https://github.com/mpv-player/mpv) for macOS & iOS,
 used by [media_kit](https://github.com/alexmercerind/media_kit), compatible
