@@ -26,6 +26,7 @@ let
   ffmpeg = callPackage ../mk-pkg-ffmpeg/default.nix { };
   uchardet = callPackage ../mk-pkg-uchardet/default.nix { };
   libass = callPackage ../mk-pkg-libass/default.nix { };
+  libplacebo = callPackage ../mk-pkg-libplacebo/default.nix { };
 
   nativeBuildInputs = [
     pkgs.meson
@@ -75,6 +76,7 @@ pkgs.stdenvNoCC.mkDerivation {
     ++ pkgs.lib.optionals (variant == "video") [
       uchardet
       libass
+      libplacebo
     ];
   configurePhase = ''
     DISABLE_ALL_OPTIONS=(
@@ -146,7 +148,7 @@ pkgs.stdenvNoCC.mkDerivation {
       -Dgl-win32=disabled `# OpenGL Win32 Backend`
       -Dgl-x11=disabled `# OpenGL X11/GLX (deprecated/legacy)`
       -Djpeg=disabled `# JPEG support`
-      -Dlibplacebo=disabled `# libplacebo support`
+      -Dlibplacebo=enabled `# libplacebo support`
       -Drpi=disabled `# Raspberry Pi support`
       -Dsdl2-video=disabled `# SDL2 video output`
       -Dshaderc=disabled `# libshaderc SPIR-V compiler`
