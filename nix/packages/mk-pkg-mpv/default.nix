@@ -49,9 +49,7 @@ let
     cd $src
     patch -p1 <${../../../patches/mpv-fix-missing-objc.patch}
     patch -p1 <${../../../patches/mpv-mix-with-others.patch}
-    if [ "${variant}" == "${variants.audio}" ]; then
-      patch -p1 <${../../../patches/mpv-remove-libass.patch}
-    fi
+    patch -p1 <${../../../patches/mpv-remove-libass.patch}
     cd -
 
     cp -r $src $out
@@ -75,7 +73,6 @@ pkgs.stdenvNoCC.mkDerivation {
     [ ffmpeg ]
     ++ pkgs.lib.optionals (variant == "video") [
       uchardet
-      libass
       libplacebo
     ];
   configurePhase = ''
